@@ -1,0 +1,71 @@
+:root {
+    --clr-primary: #0a0a0a;
+    --clr-second: #fff;
+    --bg-clr-main: #fff;
+    --bg-clr-second: #2a2a4c;
+    --clr-main-title: #121212eb;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: var(--clr-second);
+    background: var(--bg-clr-main);
+}
+
+.wrapper {
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    perspective: 10px;
+    background: var(--bg-clr-main);
+}
+
+.start-parallax {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: -1;
+}
+
+.background,
+.foreground {
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.background {
+    height: 100%;
+    transform: translate3d(-10px, 0, -10px) scale(2);
+}
+
+.foreground {
+    min-height: 400px;
+    bottom: 0;
+    transform: scale(1.5) translate3d(-5px, 50%, -5px);
+}
+
+.main__title {
+    font-size: 5em;
+    color: var(--clr-second);
+    text-shadow: 0 0 5px var(--clr-primary);
+    transform: scale(2) translate3d(-5px, 0, -10px);
+}
+
+.second__section {
+    color: var(--clr-second);
+    background: var(--bg-clr-second);
+    padding: 4em;
+}
+
+.second__title {
+    font-size: 3em;
+}
+
+.subtitle {
+    font-size: 1.5em;
+}
